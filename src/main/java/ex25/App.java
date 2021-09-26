@@ -20,6 +20,7 @@ public class App {
         int passwordStrength = passwordValidator(password);
         String passwordStrengthStr = passwordStrength == 1 ? "very weak" : passwordStrength == 2 ? "weak" : passwordStrength == 3 ? "strong" : "very strong";
 
+        // output password strength
         System.out.print("The password '" + password + "' is a " + passwordStrengthStr + " password.");
     }
 
@@ -49,12 +50,12 @@ public class App {
 
         // determine strength and return strength value accordingly
         if (hasLetters && hasNumbers && hasSpecialChars && passwordCharArray.length >= 8)
-            return 4;
+            return 4; // very strong
         else if (hasLetters && hasNumbers && passwordCharArray.length >= 8)
-            return 3;
+            return 3; // strong
         else if (hasLetters)
-            return 2;
+            return 2; // weak
         else
-            return 1;
+            return 1; // very weak
     }
 }
