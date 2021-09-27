@@ -25,12 +25,14 @@ public class App {
             System.out.println("\nResting Pulse : " + restingHR + "      Age : " + age + "\n");
             System.out.println("Intensity    | Rate");
             System.out.println("-------------|--------");
+
             // display calculated target heart rates
             for (int i = 55; i <= 95; i += 5) {
                 targetHeartRate = (((220 - age) - restingHR) * i / 100) + restingHR;
                 System.out.println(i + "%" + "          | " + Math.round(targetHeartRate) + " bpm");
             }
         } catch(Exception e) {
+            // output error in input
             System.out.println("Sorry. That's not a valid input. Numbers only.");
         }
     }
