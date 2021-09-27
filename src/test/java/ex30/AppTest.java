@@ -3,7 +3,7 @@
  *  Copyright 2021 Michael Vuolo
  */
 
-package ex29;
+package ex30;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
