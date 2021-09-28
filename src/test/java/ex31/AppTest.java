@@ -5,13 +5,14 @@
 
 package ex31;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AppTest {
     @Test
-    public void returnTrue()
-    {
-        assertTrue(true);
+    public void calcNumYears_138() {
+        App karvonen = new App();
+        Assertions.assertEquals(138, Math.round(karvonen.calcTargetHeartRate(65, 22, 55)));
     }
 }
+

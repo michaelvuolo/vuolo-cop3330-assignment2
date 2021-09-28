@@ -28,12 +28,16 @@ public class App {
 
             // display calculated target heart rates
             for (int i = 55; i <= 95; i += 5) {
-                targetHeartRate = (((220 - age) - restingHR) * i / 100) + restingHR;
+                targetHeartRate = calcTargetHeartRate(restingHR, age, i);
                 System.out.println(i + "%" + "          | " + Math.round(targetHeartRate) + " bpm");
             }
         } catch(Exception e) {
             // output error in input
             System.out.println("Sorry. That's not a valid input. Numbers only.");
         }
+    }
+
+    public static float calcTargetHeartRate(float restingHR, int age, int intensity) {
+        return (((220 - age) - restingHR) * intensity / 100) + restingHR;
     }
 }   

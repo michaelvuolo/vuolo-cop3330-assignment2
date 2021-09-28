@@ -22,10 +22,14 @@ public class App {
         } while (!validateR(rStr));
 
         // calc num years to double investment
-        int numYears = 72 / (int)Float.parseFloat(rStr);
+        int numYears = calcNumYears(Float.parseFloat(rStr));
 
         // display years to double investment
         System.out.print("It will take " + numYears + " years to double your initial investment.");
+    }
+
+    public static int calcNumYears(float r) {
+        return 72 / (int)r;
     }
 
     public static boolean validateR(String rStr) {

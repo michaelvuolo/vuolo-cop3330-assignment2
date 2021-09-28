@@ -5,14 +5,15 @@
 
 package ex26;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AppTest {
     @Test
-    public void returnTrue()
-    {
-        assertTrue(true);
+    public void calculateMonthsUntilPaidOff_70() {
+        PaymentCalculator paymentCalculator = new PaymentCalculator();
+        Assertions.assertEquals(70, paymentCalculator.calculateMonthsUntilPaidOff(5000, 12, 100));
+        Assertions.assertNotEquals(70, paymentCalculator.calculateMonthsUntilPaidOff(5000, 12, 200));
     }
 }
 

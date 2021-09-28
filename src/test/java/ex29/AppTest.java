@@ -5,13 +5,14 @@
 
 package ex29;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AppTest {
     @Test
-    public void returnTrue()
-    {
-        assertTrue(true);
+    public void calcNumYears_18() {
+        App rule72 = new App();
+        Assertions.assertEquals(18, rule72.calcNumYears((float)4.0));
     }
 }
+

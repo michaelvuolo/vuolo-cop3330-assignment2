@@ -5,13 +5,14 @@
 
 package ex30;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AppTest {
     @Test
     public void returnTrue() {
         // there is no test for this solution
-        assertTrue(true);
+        Assertions.assertTrue(true);
     }
 }
+

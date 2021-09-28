@@ -5,14 +5,21 @@
 
 package ex24;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AppTest {
     @Test
-    public void returnTrue()
-    {
-        assertTrue(true);
+    public void isAnagram_False() {
+        App anagram = new App();
+        Assertions.assertFalse(anagram.isAnagram("tone", "part"));
+        Assertions.assertFalse(anagram.isAnagram("tone", "ent"));
+    }
+
+    @Test
+    public void isAnagram_True() {
+        App anagram = new App();
+        Assertions.assertTrue(anagram.isAnagram("tone", "enot"));
     }
 }
 
