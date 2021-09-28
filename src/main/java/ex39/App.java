@@ -9,9 +9,6 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) {
-        // create new scanner
-        Scanner input = new Scanner(System.in);
-
         // setup employees
         Employee[] employeeArray = {
             new Employee("John","Johnson","Manager",20161231),
